@@ -45,7 +45,7 @@ class PyrogramBot:
 
     def run_telebot(self):
         print('Atempt to run TeleBot')
-        self.bot.polling(long_polling_timeout=20)
+        self.bot.infinity_polling()
 
     def run_events_listeners(self):
 
