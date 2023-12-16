@@ -16,7 +16,7 @@ class PyrogramBot:
         self.API_HASH = os.getenv("API_HASH")
         self.PHONE_NUMBER = os.getenv("PHONE_NUMBER")  # номер зарегистрованный в телеге
         self.PRIVATE_PUBLIC = int(os.getenv("PRIVATE_PUBLIC"))  # скрытый паблик для управления ботом
-        self.PUBLIC_PUBLIC = -1000841210915  # паблик куда будем репостить
+        self.PUBLIC_PUBLIC = -1001909924539  # паблик куда будем репостить
         self.SOURCE_PUBLICS = [
             # список пабликов-доноров, откуда бот будет пересылать посты
             'niccynewmodelss',
@@ -64,7 +64,7 @@ class PyrogramBot:
 
 
 
-            print('Price= ', self.__price_parser('Hello world aljfskdflsadkj 24.8$'))
+            # print('Price= ', self.__price_parser('Hello world aljfskdflsadkj 24.8$'))
 
 
             # Check if the message is part of a media group and the media group ID is different
