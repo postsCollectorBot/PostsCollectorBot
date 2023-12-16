@@ -16,10 +16,13 @@ class PyrogramBot:
         self.API_HASH = os.getenv("API_HASH")
         self.PHONE_NUMBER = os.getenv("PHONE_NUMBER")  # номер зарегистрованный в телеге
         self.PRIVATE_PUBLIC = int(os.getenv("PRIVATE_PUBLIC"))  # скрытый паблик для управления ботом
-        self.PUBLIC_PUBLIC = os.getenv("PUBLIC_PUBLIC")  # паблик куда будем репостить
+        self.PUBLIC_PUBLIC = 'PublicGroupForBot'  # паблик куда будем репостить
         self.SOURCE_PUBLICS = [
             # список пабликов-доноров, откуда бот будет пересылать посты
-            'mudak',
+            'niccynewmodelss',
+            'Joyme_lifee',
+            'hotfashion06telegram',
+            'robinstores',
             'zagruz12'
         ]
 
@@ -100,9 +103,9 @@ class PyrogramBot:
 
             elif code == "Отправлено":
                 try:
-                    client.copy_media_group(self.PRIVATE_PUBLIC, message.chat.id, message.id - 1)
+                    client.copy_media_group(self.PUBLIC_PUBLIC, message.chat.id, message.id - 1)
                 except ValueError:
-                    self.bot.copy_message(self.PRIVATE_PUBLIC, message.chat.id, message.id - 1)
+                    self.bot.copy_message(self.PUBLIC_PUBLIC, message.chat.id, message.id - 1)
                 self.bot.delete_message(message.chat.id, message.id)
 
     def __price_parser(self, description):
