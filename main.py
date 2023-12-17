@@ -8,5 +8,5 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    run_telebot()
+    await run_telebot()
     return {"message": "Hello World"}
