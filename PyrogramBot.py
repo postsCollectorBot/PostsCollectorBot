@@ -44,11 +44,11 @@ class PyrogramBot:
 
 
     def _create_bot(self):
-        self.bot = telebot.TeleBot(self.BOT_ID)
+        self.bot = telebot.TeleBot(self.BOT_ID , threaded=False)
 
     def run_telebot(self):
         print('Atempt to run TeleBot')
-        self.bot.infinity_polling()
+        self.bot.polling(non_stop=True, interval=0)
 
     def run_events_listeners(self):
 
