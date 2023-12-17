@@ -1,7 +1,12 @@
-from multiprocessing import Process
 from building_main import run_telebot
-from building_main import run_pyrogram
+from fastapi import FastAPI
 
-if __name__ == '__main__':
-   run_telebot()
+from typing import Optional
 
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    run_telebot()
+    return {"message": "Hello World"}
